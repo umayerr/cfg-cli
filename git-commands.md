@@ -1,55 +1,79 @@
+## Check git version
+```
+git --version
+```
+
+
+## Clone remote repository to local machine
+```
+git clone <remote>
+```
+
+
+## Get latest changes from remote repository to local machine
+To fetch and merge the changes from remote branch into local branch:
+```
+git pull origin <branch>
+```
+
+
 ## Send file(s) to remote repository from working directory
 
-### Step 1: Add file to the stage area
+### Step 1 - Add file to the stage area
 
-Add a single file
+To add a single file:
 ```
 git add <file>
 ```
 
-Add all files from current directory (use ```-all``` or ```-A``` or ```*```)
+To add all files from current directory (use ```-all``` or ```-A``` or ```*```):
 ```
 git add --all
 ```
 
-Add all files from current directory and its child directories
+To add all files from current directory and its child directories:
 ```
 git add .
 ```
 
-### Step 2: Commit and send file to local repository
+### Step 2 - Commit and send file to local repository
 ```
 git commit -m "<comment>"
 ```
 
-### Step 3: Push file to remote repository
+### Step 3 - Push file to remote repository
 ```
 git push origin <branch>
+```
+
+### Add and commit (Step 1 and 2) in single command
+```
+git commit -a -m "<comment>"
 ```
 
 
 ## Unstage (remove from stage area) file(s) but keep the changes in working directory
 
-### Using ```git restore --staged``` (Recommended for Git 2.23 and newer)
+### Option 1: Using ```git restore --staged``` (Recommended for Git 2.23 and newer)
 
-Unstage a single file
+To unstage a single file:
 ```
 git restore --staged <file>
 ```
 
-Unstage all files
+To unstage all files:
 ```
 git restore --staged .
 ```
 
-### Using ```git reset``` (Works in all versions of Git)
+### Option 2: Using ```git reset``` (Works in all versions of Git)
 
-Unstage a single file
+To unstage a single file:
 ```
 git reset <file>
 ```
 
-Unstage all files
+To unstage all files:
 ```
 git reset
 ```
@@ -63,17 +87,17 @@ git restore <file>
 
 ## Undo commit from local repository
 
-Option 1: Undo the last commit (back to staging area) and keep changes
+Option 1 - To undo the last commit (back to staging area) and to keep changes:
 ```
 git reset --soft HEAD~1
 ```
 
-Option 2: Undo the last commit (remove from stage area) and keep changes
+Option 2 - To undo the last commit (remove from stage area) and to keep changes:
 ```
 git reset --mixed HEAD~1
 ```
 
-Option 3: Undo the last commit and discard changes from both the working directory and the staging area
+Option 3 - To undo the last commit and discard changes from both working directory and staging area:
 ```
 git reset --hard HEAD~1
 ```
@@ -81,15 +105,14 @@ git reset --hard HEAD~1
 
 ## Undo commit from remote repository
 
-### Option 1: Amend the last commit, make the changes and force-push the revised commit
+### Option 1 - Amend the last commit
 
-Step 1: Undo the commit but keep the changes staged
+Step 1 - To undo the last commit and to keep the changes staged:
 ```
 git reset --soft HEAD~1
 ```
 
-Step 2: Make changes or commit again
-For any changes in the file, add the file first then commit
+Step 2 - To make changes or to commit again. If the file is updated, add the file first then commit; otherwise commit:
 ```
 git add <file>
 ```
@@ -97,13 +120,17 @@ git add <file>
 git commit -m "<comment>"
 ```
 
-Step 3: Force push to overwrite the old commit on the remote
+Step 3 - To force push to overwrite the old commit on the remote repository:
 ```
 git push --force
 
 ```
 
-### Option 2: If the commit has been pushed and others may be using the branch, it is better to create a new commit that reverts the previous one
+### Option 2 - Revert the last commit
 ```
 git revert <commit-hash>
+```
+After the execution of ```git revert``` command, a new commit that reverses the previous commit is created. To push the revert commit to the remote repository:
+```
+git push origin <branch>
 ```
