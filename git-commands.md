@@ -21,13 +21,19 @@ git rm <file>
 ```
 
 
-## Clone remote repository to local machine
+
+
+
+
+
+# Linking local machine to remote repository
+
+### Option 1 - Clone remote repository to local machine
 ```
 git clone <remote>
 ```
 
-
-## Initialize git in local directory and push file in newly created remote
+### Option 2 - Initialize git in local machine and then link to remote repository
 Step 1 - Go to github.com and create a remote repository
 Step 2 - Go to the targated working directory using CLI and initialize git
 ```
@@ -50,6 +56,12 @@ Step 6 - Verifiy the new remote URL [OPTIONAL]
 ```
 git remote -v 
 ```
+
+
+
+
+
+
 
 
 ## Get latest changes from remote repository to local machine
