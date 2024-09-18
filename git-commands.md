@@ -1,38 +1,9 @@
-## Check git version
-```
-git --version
-```
-
-
-## Check the git log to see changes
-To see detail log:
-```
-git log				[detail log]
-```
-To see shortcut log:
-```
-git log --oneline
-```
-
-
-## Delete a file
-```
-git rm <file>
-```
-
-
-
-
-
-
-
 # Linking local machine to remote repository
 
 ### Option 1 - Clone remote repository to local machine
 ```
 git clone <remote>
 ```
-
 ### Option 2 - Initialize git in local machine and then link to remote repository
 Step 1 - Go to github.com and create a remote repository
 Step 2 - Go to the targated working directory using CLI and initialize git
@@ -61,27 +32,12 @@ git remote -v
 
 
 
+# Pushing file to remote repository from local machine
 
-
-
-## Get latest changes from remote repository to local machine
-Option 1 - To fetch and merge the changes from remote branch into local branch:
+### NOTE: Check status after each step to see how things are changed
 ```
-git pull origin <branch>
+git status
 ```
-Option 2 - First fetch the changes to local repository from romote repository, check the changes using ```diff``` command, and then merge it to local branch:
-```
-git fetch
-```
-```
-diff <branch> origin/<branch>
-```
-```
-git merge
-```
-
-
-## Send file to remote repository from working directory
 ### Step 1 - Add file to the stage area
 To add a single file:
 ```
@@ -107,6 +63,58 @@ git push origin <branch>
 ```
 git commit -a -m "<comment>"
 ```
+
+
+
+
+
+## Check git version
+```
+git --version
+```
+
+
+## Check the git log to see changes
+To see detail log:
+```
+git log
+```
+To see shortcut log:
+```
+git log --oneline
+```
+
+
+## Delete a file
+```
+git rm <file>
+```
+
+
+
+
+
+
+
+
+## Get latest changes from remote repository to local machine
+Option 1 - To fetch and merge the changes from remote branch into local branch:
+```
+git pull origin <branch>
+```
+Option 2 - First fetch the changes to local repository from romote repository, check the changes using ```diff``` command, and then merge it to local branch:
+```
+git fetch
+```
+```
+diff <branch> origin/<branch>
+```
+```
+git merge
+```
+
+
+
 
 
 ## Unstage file but keep the changes in working directory
