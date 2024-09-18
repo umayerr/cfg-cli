@@ -57,9 +57,22 @@ git commit -m "<comment>"
 ```
 git push origin <branch>
 ```
-### Add and commit (Step 1 and 2) in single command
+### NOTE: Add and commit (Step 1 and 2) in single command
 ```
 git commit -a -m "<comment>"
+```
+
+
+
+
+
+# To see the list of files are commited but not pushed yet
+```
+git diff --stat --cached origin/<branch>
+```
+Or
+```
+git diff --stat --stageed origin/<branch>
 ```
 
 
@@ -200,15 +213,7 @@ git merge
 
 
 
-
-
-## Check git version
-```
-git --version
-```
-
-
-## Delete a file
+# Delete a file
 ```
 git rm <file>
 ```
@@ -217,20 +222,12 @@ git rm <file>
 
 
 
+# Check git version
+```
+git --version
+```
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-## Check what files are commited but not pushed to remote
-## Changing in file after commit (not pushed)
