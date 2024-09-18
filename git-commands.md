@@ -1,5 +1,4 @@
 # Linking local machine to remote repository
-
 ### Option 1 - Clone remote repository to local machine
 ```
 git clone <remote>
@@ -33,7 +32,6 @@ git remote -v
 
 
 # Pushing file to remote repository from local machine
-
 ### NOTE: Check status after each step to see how things are changed
 ```
 git status
@@ -68,13 +66,7 @@ git commit -a -m "<comment>"
 
 
 
-## Check git version
-```
-git --version
-```
-
-
-## Check the git log to see changes
+# Check the git log and find commit hash
 To see detail log:
 ```
 git log
@@ -85,40 +77,29 @@ git log --oneline
 ```
 
 
-## Delete a file
-```
-git rm <file>
-```
 
 
 
-
-
-
-
-
-## Get latest changes from remote repository to local machine
-Option 1 - To fetch and merge the changes from remote branch into local branch:
+# Check differences between two files
+To see the differences between working directory and staged/committed file:
 ```
-git pull origin <branch>
+git diff
 ```
-Option 2 - First fetch the changes to local repository from romote repository, check the changes using ```diff``` command, and then merge it to local branch:
+To see the changes of a specific commit:
 ```
-git fetch
+git show <commit-hash>
 ```
+To see the differences between two commits:
 ```
-diff <branch> origin/<branch>
-```
-```
-git merge
+git diff <commit-hash-1> <commit-hash-2>
 ```
 
 
 
 
 
-## Unstage file but keep the changes in working directory
-### Option 1: Using ```git restore --staged``` (Recommended for Git 2.23 and newer)
+# Unstage file but keep the changes in working directory
+### Option 1 - Using ```git restore --staged``` (Recommended for Git 2.23 and newer)
 To unstage a single file:
 ```
 git restore --staged <file>
@@ -127,7 +108,7 @@ To unstage all files:
 ```
 git restore --staged .
 ```
-### Option 2: Using ```git reset``` (Works in all versions of Git)
+### Option 2 - Using ```git reset``` (Works in all versions of Git)
 To unstage a single file:
 ```
 git reset <file>
@@ -138,29 +119,37 @@ git reset
 ```
 
 
-## Discard changes in working directory
+
+
+
+# Discard changes in working directory
 ```
 git restore <file>
 ```
 
 
-## Undo commit from local repository
-Option 1 - To undo the last commit (back to staging area) and to keep changes:
+
+
+
+# Undo commit from local repository
+### Option 1 - To undo the last commit (back to staging area) and to keep changes:
 ```
 git reset --soft HEAD~1
 ```
-
-Option 2 - To undo the last commit (remove from stage area) and to keep changes:
+### Option 2 - To undo the last commit (remove from stage area) and to keep changes:
 ```
 git reset --mixed HEAD~1
 ```
-Option 3 - To undo the last commit and discard changes from both working directory and staging area:
+### Option 3 - To undo the last commit and discard changes from both working directory and staging area:
 ```
 git reset --hard HEAD~1
 ```
 
 
-## Undo commit from remote repository
+
+
+
+# Undo commit from remote repository
 ### Option 1 - Amend the last commit
 Step 1 - To undo the last commit and to keep the changes staged:
 ```
@@ -188,19 +177,59 @@ git push origin <branch>
 ```
 
 
-## Check differences in changes
-To see the differences between working directory and staged/commited file:
+
+
+
+# Get latest changes from remote repository to working directory
+### Option 1 - To fetch and merge the changes from remote branch into local branch:
 ```
-git diff
+git pull origin <branch>
 ```
-To see the changes of a specific commit
+### Option 2 - First fetch the changes to local repository from romote repository, check the changes using ```diff``` command, and then merge it to local branch:
 ```
-git show <commit>
+git fetch
 ```
-To see the differences between two commits
 ```
-git diff <commit1> <commit2>
+diff <branch> origin/<branch>
 ```
+```
+git merge
+```
+
+
+
+
+
+
+
+## Check git version
+```
+git --version
+```
+
+
+## Delete a file
+```
+git rm <file>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Check what files are commited but not pushed to remote
