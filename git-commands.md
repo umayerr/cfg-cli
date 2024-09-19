@@ -26,8 +26,7 @@ Step 6 - Verifiy the new remote URL [OPTIONAL]
 ```
 git remote -v 
 ```
-<br />
-<br />
+<br><br>
 
 
 
@@ -62,7 +61,7 @@ git push origin <branch>
 ```
 git commit -a -m "<comment>"
 ```
-
+<br><br>
 
 
 
@@ -80,7 +79,7 @@ To see the list of commits that are not pushed yet:
 ```
 git log origin/main..HEAD
 ```
-
+<br><br>
 
 
 
@@ -94,7 +93,7 @@ To see shortcut log:
 ```
 git log --oneline
 ```
-
+<br><br>
 
 
 
@@ -112,7 +111,7 @@ To see the differences between two commits:
 ```
 git diff <commit-hash-1> <commit-hash-2>
 ```
-
+<br><br>
 
 
 
@@ -136,7 +135,7 @@ To unstage all files:
 ```
 git reset
 ```
-
+<br><br>
 
 
 
@@ -145,7 +144,7 @@ git reset
 ```
 git restore <file>
 ```
-
+<br><br>
 
 
 
@@ -163,7 +162,7 @@ Option 3 - To undo the last commit and discard changes from both working directo
 ```
 git reset --hard HEAD~1
 ```
-
+<br><br>
 
 
 
@@ -194,7 +193,7 @@ After the execution of ```git revert``` command, a new commit that reverses the 
 ```
 git push origin <branch>
 ```
-
+<br><br>
 
 
 
@@ -214,7 +213,7 @@ diff <branch> origin/<branch>
 ```
 git merge
 ```
-
+<br><br>
 
 
 
@@ -240,11 +239,15 @@ To delete a branch from local repository:
 ```
 git branch -d <branch-name>
 ```
+To delete a branch forcefully from local repository:
+```
+git branch -D <branch-name>
+```
 To delete a branch from remote repository:
 ```
-git push origin --delete <branch-name>
+git push origin --d <branch-name>
 ```
-
+<br><br>
 
 
 
@@ -253,7 +256,7 @@ git push origin --delete <branch-name>
 ```
 git rm <file>
 ```
-
+<br><br>
 
 
 
