@@ -66,13 +66,18 @@ git commit -a -m "<comment>"
 
 
 
-# To see the list of files are commited but not pushed yet
+# Commits that are not pushed yet
+To see the list of files are committed but not pushed yet:
 ```
 git diff --stat --cached origin/<branch>
 ```
 Or
 ```
 git diff --stat --stageed origin/<branch>
+```
+To see the list of commits that are not pushed yet:
+```
+git log origin/main..HEAD
 ```
 
 
@@ -145,15 +150,15 @@ git restore <file>
 
 
 # Undo commit from local repository
-### Option 1 - To undo the last commit (back to staging area) and to keep changes:
+Option 1 - To undo the last commit (back to staging area) and to keep changes:
 ```
 git reset --soft HEAD~1
 ```
-### Option 2 - To undo the last commit (remove from stage area) and to keep changes:
+Option 2 - To undo the last commit (remove from stage area) and to keep changes:
 ```
 git reset --mixed HEAD~1
 ```
-### Option 3 - To undo the last commit and discard changes from both working directory and staging area:
+Option 3 - To undo the last commit and discard changes from both working directory and staging area:
 ```
 git reset --hard HEAD~1
 ```
@@ -231,3 +236,4 @@ git --version
 
 
 
+# Branch operation
