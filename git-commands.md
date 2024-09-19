@@ -73,7 +73,7 @@ git diff --stat --cached origin/<branch>
 ```
 Or
 ```
-git diff --stat --stageed origin/<branch>
+git diff --stat --staged origin/<branch>
 ```
 To see the list of commits that are not pushed yet:
 ```
