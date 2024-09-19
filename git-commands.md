@@ -218,6 +218,36 @@ git merge
 
 
 
+# Branch operation (create, merge, delete)
+To create a branch:
+```
+git branch <branch-name>
+```
+To switch to new branch:
+```
+git checkout <branch-name>
+```
+To check the difference between two branches:
+```
+git diff <branch-name-1> <branch-name-2>
+```
+To merge one branch into another, first switch to the branch that will receive the changes:
+```
+git merge <branch-name>
+```
+To delete a branch from local repository:
+```
+git branch -d <branch-name>
+```
+To delete a branch from remote repository:
+```
+git push origin --delete <branch-name>
+```
+
+
+
+
+
 # Delete a file
 ```
 git rm <file>
@@ -236,4 +266,3 @@ git --version
 
 
 
-# Branch operation
