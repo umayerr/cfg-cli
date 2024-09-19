@@ -223,6 +223,11 @@ To create a branch:
 ```
 git branch <branch-name>
 ```
+To see the list of branches:
+&nbsp; To see the list of local branches:
+```
+git branch
+```
 To switch to new branch:
 ```
 git checkout <branch-name>
