@@ -199,11 +199,11 @@ git push origin <branch>
 
 
 # Get latest changes from remote repository to working directory
-### Option 1 - To fetch and merge the changes from remote branch into local branch:
+Option 1 - To fetch and merge the changes from remote branch into local branch:
 ```
 git pull origin <branch>
 ```
-### Option 2 - First fetch the changes to local repository from romote repository, check the changes using ```diff``` command, and then merge it to local branch:
+Option 2 - First fetch the changes to local repository from romote repository, check the changes using ```diff``` command, and then merge it to local branch:
 ```
 git fetch
 ```
