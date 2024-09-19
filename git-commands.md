@@ -26,7 +26,8 @@ Step 6 - Verifiy the new remote URL [OPTIONAL]
 ```
 git remote -v 
 ```
-\\
+<br />
+<br />
 
 
 
