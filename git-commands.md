@@ -1,4 +1,4 @@
-# *Linking local machine to remote repository*
+# **Linking local machine to remote repository**
 ### Option 1 - Clone remote repository to local machine
 ```
 git clone <remote>
