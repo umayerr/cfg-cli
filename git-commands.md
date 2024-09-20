@@ -120,7 +120,7 @@ git diff <commit-hash-1> <commit-hash-2>
 ### Option 1 - Using ```git restore --staged``` (Recommended for Git 2.23 and newer)
 To unstage a single file:
 ```
-git restore --staged <file>
+git restore --staged <file-name>
 ```
 To unstage all files:
 ```
@@ -129,7 +129,7 @@ git restore --staged .
 ### Option 2 - Using ```git reset``` (Works in all versions of Git)
 To unstage a single file:
 ```
-git reset <file>
+git reset <file-name>
 ```
 To unstage all files:
 ```
@@ -270,19 +270,32 @@ git push origin --d <branch-name>
 
 # Delete a file
 ```
-git rm <file>
+git rm <file-name>
 ```
 <br><br>
 
 
 
 
-# Check git version
+# Other useful commands
+Check git version
 ```
 git --version
 ```
-
-
-
-
+To track who modified each line of a file
+```
+git blame <file-name>
+```
+To search for text in the repository:
+```
+git grep <text>
+```
+To display the commit history along with commit message, author, date, and impacted files:
+```
+git whatchanged
+```
+For graphical view:
+```
+gitk --all
+```
 
