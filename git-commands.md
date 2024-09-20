@@ -1,4 +1,3 @@
-# **Linking local machine to remote repository**
 # Linking local machine to remote repository
 ### Option 1 - Clone remote repository to local machine
 ```
@@ -32,7 +31,7 @@ git remote -v
 
 
 
-# *Pushing file to remote repository from local machine*
+# Pushing file to remote repository from local machine
 ### NOTE: Check status after each step to see how things are changed
 ```
 git status
@@ -67,7 +66,7 @@ git commit -a -m "<comment>"
 
 
 
-# *Commits that are not pushed yet*
+# Commits that are not pushed yet
 To see the list of files are committed but not pushed yet:
 ```
 git diff --stat --cached origin/<branch-name>
@@ -85,7 +84,7 @@ git log origin/<branch-name>..HEAD
 
 
 
-# *Check the git log and find commit hash*
+# Check the git log and find commit hash
 To see detail log:
 ```
 git log
@@ -99,7 +98,7 @@ git log --oneline
 
 
 
-# *Check differences between two files*
+# Check differences between two files
 To see the differences between working directory and staged/committed file:
 ```
 git diff
@@ -117,7 +116,7 @@ git diff <commit-hash-1> <commit-hash-2>
 
 
 
-# *Unstage file but keep the changes in working directory*
+# Unstage file but keep the changes in working directory
 ### Option 1 - Using ```git restore --staged``` (Recommended for Git 2.23 and newer)
 To unstage a single file:
 ```
@@ -141,7 +140,7 @@ git reset
 
 
 
-# *Discard changes in working directory*
+# Discard changes in working directory
 ```
 git restore <file-name>
 ```
@@ -150,7 +149,7 @@ git restore <file-name>
 
 
 
-# *Undo commit from local repository*
+# Undo commit from local repository
 Option 1 - To undo the last commit (back to staging area) and to keep changes:
 ```
 git reset --soft HEAD~1
@@ -168,7 +167,7 @@ git reset --hard HEAD~1
 
 
 
-# *Undo commit from remote repository*
+# Undo commit from remote repository
 ### Option 1 - Amend the last commit
 Step 1 - To undo the last commit and to keep the changes staged:
 ```
@@ -199,7 +198,7 @@ git push origin <branch-name>
 
 
 
-# *Get latest changes from remote repository to working directory*
+# Get latest changes from remote repository to working directory
 Option 1 - To fetch and merge the changes from remote branch into local branch:
 ```
 git pull origin <branch-name>
@@ -219,7 +218,7 @@ git merge
 
 
 
-# *Branch operation (create, rename, merge, delete)*
+# Branch operation (create, rename, merge, delete)
 To create a branch:
 ```
 git branch <branch-name>
@@ -273,7 +272,7 @@ git push origin --d <branch-name>
 
 
 
-# *Delete a file*
+# Delete a file
 ```
 git rm <file-name>
 ```
@@ -282,7 +281,7 @@ git rm <file-name>
 
 
 
-# *Other useful commands*
+# Other useful commands
 Check git version
 ```
 git --version
