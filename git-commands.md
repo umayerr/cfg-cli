@@ -178,7 +178,7 @@ Step 2 - To make changes or to commit again. If the file is updated, add the fil
 git add <file>
 ```
 ```
-git commit -m "<comment>"
+git commit -m "<commit-note>"
 ```
 Step 3 - To force push to overwrite the old commit on the remote repository:
 ```
@@ -275,6 +275,11 @@ git push origin --d <branch-name>
 # Delete a file
 ```
 git rm <file-name>
+```
+```git rm``` command stages the file deletion. So, the local repository needs to be committed and pushed to remote repository:
+```
+git commit -m "<commit-note>"
+git push origin <branch-name>
 ```
 <br><br>
 
