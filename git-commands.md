@@ -20,7 +20,7 @@ git config --global user.email "<email>"
 ```
 Step 5 - Link the working directory to the remote
 ```
-git remote add origin <remote>
+git remote add origin <remote-url>
 ```
 Step 6 - Verifiy the new remote URL [OPTIONAL]
 ```
@@ -280,6 +280,23 @@ git rm <file-name>
 ```
 git commit -m "<commit-note>"
 git push origin <branch-name>
+```
+<br><br>
+
+
+
+
+# Change remote
+*Option 1* - Remove current remote and add new remote:
+```
+git remote remove origin
+```
+```
+git remote add origin <remote-url>
+```
+*Option 2* - Replace current remote with new remote:
+```
+git remote set-url origin <remote-url>
 ```
 <br><br>
 
