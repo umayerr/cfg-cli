@@ -1,34 +1,34 @@
-### Create virtual environment
+#### Create virtual environment
 ```
 python -m venv [venv_name]
 ```
 
-### Activate virtual environment
-**Linux:**
+#### Activate virtual environment
+Linux:
 ```
 source [venv_name]/bin/activate
 ```
-**Windows:**
+Windows:
 ```
 [venv_name]\Scripts\activate
 ```
 
-### Deactivate venv
+#### Deactivate venv
 ```
 deactivate
 ```
 
-# See list of all venv
+#### See list of all venv
 ```
 ls
 ```
 
-### Delete a venv
+#### Delete a venv
 ```
 rm -rf [venv_name]
 ```
 
-### Install ipykernel
+#### Install ipykernel
 ```
 pip install ipykernel
 ```
