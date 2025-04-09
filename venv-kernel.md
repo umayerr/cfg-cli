@@ -4,14 +4,14 @@ python -m venv [venv_name]
 ```
 
 #### Activate virtual environment
-Linux:
-```
-source [venv_name]/bin/activate
-```
-Windows:
-```
-[venv_name]\Scripts\activate
-```
+- Linux:
+  ```
+  source [venv_name]/bin/activate
+  ```
+- Windows:
+  ```
+  [venv_name]\Scripts\activate
+  ```
 
 #### Deactivate venv
 ```
