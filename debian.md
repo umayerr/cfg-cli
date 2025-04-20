@@ -1,35 +1,14 @@
-- #### Connect database using terminal
+## Post installation todos:
+- #### Add the user in sudo list (as root):
   ```
-  psql -h localhost -U [username]
-  ```
-
-- #### Disconnect database using terminal
-  ```
-  \q
+  vi /etc/sudoers
+  [user]  ALL=(ALL:ALL) ALL
+  ~/.bashrc
   ```
 
-- #### Check the list of databases
+- #### Comment the first line of sources.list 
   ```
-  \l
-  ```
-  ```
-  \l+
-  ```
-  ```
-  SELECT datname FROM pg_database;
+  vi /etc/apt/sources.list
+  ~/.bashrc
   ```
 
-- #### Connet to the database
-  ```
-  \c [databse_name]
-  ```
-
-- #### https://www.postgresqltutorial.com/postgresql-administration/postgresql-create-database/
-  ```
-  
-  ```
-
-- #### 
-  ```
-  
-  ```
